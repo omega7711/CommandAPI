@@ -52,6 +52,7 @@ public class MyPlugin extends JavaPlugin {
     }
 }
 ```
+```
     import org.bukkit.command.CommandExecutor;
 
     public class Command implements CommandExecutor {
