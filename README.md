@@ -34,7 +34,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'fr.idaamo:CommandAPI:1.0'
+    implementation 'fr.omega:CommandAPI:1.0'
 }
 ```
 
@@ -56,15 +56,16 @@ public class MyPlugin extends JavaPlugin {
 }
 ```
 ```java
-    import org.bukkit.command.CommandExecutor;
+import org.bukkit.command.CommandExecutor;
 
-    public class Command implements CommandExecutor {
+public class Command implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, org.bukkit.command.Command command, String label, String[] args) {
         // Your code here
         return true;
     }
+}
 ```
 
 #### b. You can even change multiple commands at the same time
@@ -97,13 +98,13 @@ new CommandAPIRequestBuilder("/calc", "/calculate")
     .build(this);
 ```
 ```java
-    import org.bukkit.command.CommandExecutor;
+import org.bukkit.command.CommandExecutor;
 
-    public class DisabledCommand implements CommandExecutor {
-
+public class DisabledCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, org.bukkit.command.Command command, String label, String[] args) {
         sender.sendMessage("This command is disabled.");
         return true;
     }
+}
 ```
